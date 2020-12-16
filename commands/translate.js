@@ -20,7 +20,7 @@ module.exports = {
         	"useQueryString": true
         });
         req.end(function (res) {
-        	if (res.error)return client.sendMessage(msg.from,`Errererr :v`)
+        	if (res.error)throw new Error(res.error)
             client.sendMessage(msg.from,res.body.responseData.translatedText)
         });
         
