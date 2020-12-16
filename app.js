@@ -1,0 +1,26 @@
+const fs = require('fs')
+const {Client} = require('whatsapp-web.js')
+const sessionData = require('./session.json')
+const commandFiles = fs.readdirSync('./commands').filter(x => x.endsWith('js'))
+const client = new Client({session:sessionData})
+const commands = []
+
+for(file of commandFiles){
+    const command = require(`./commands/${file}`)
+    commands.push(command)
+}
+client.once('ready',()=>console.log(`i'm alive`))
+client.on('message',msg=>{
+    if(!(msg.from == '6285798441009@c.us'))return
+        const args = msg.body.trim().split(/ +/)
+        const commandName = args.shift().toLowerCase()
+        const command = commands.findIndex(x=>x.name.includes(commandName))
+        if(command == -1)return
+    try{
+        commands[command].execute(client,msg,args)
+    }catch(err){
+        console.error(err)
+    }
+})
+
+client.initialize()

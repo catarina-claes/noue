@@ -1,0 +1,19 @@
+{
+  "name": "bot-wa",
+  "version": "1.0.0",
+  "description": "ini adalah bot wa bernama noue",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bot",
+    "noue"
+  ],
+  "author": "noue",
+  "license": "ISC",
+  "dependencies": {
+    "unirest": "^0.6.0",
+    "whatsapp-web.js": "^1.11.1"
+  }
+}
