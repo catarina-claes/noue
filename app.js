@@ -2,7 +2,7 @@ const fs = require('fs')
 const {Client} = require('whatsapp-web.js')
 const sessionData = require('./session.json')
 const commandFiles = fs.readdirSync('./commands').filter(x => x.endsWith('js'))
-const client = new Client({session:sessionData,puppeteer:puppeteer.launch({ args: ['--no-sandbox'] })})
+const client = new Client({session:sessionData,puppeteer:{ args: ['--no-sandbox'] }})
 const commands = []
 
 for(file of commandFiles){
