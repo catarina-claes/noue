@@ -15,7 +15,7 @@ module.exports = {
             "useQueryString": true
         });
         req.end(function (res) {
-            if (res.error)throw new Error(res.error)
+            if (res.error)return client.sendMessage(msg.from,'Mata uangnya salah pak')
             client.sendMessage(msg.from,`${res.body.amount.toFixed(2)} ${res.body.to}`)
         });}
 }
