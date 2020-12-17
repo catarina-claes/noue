@@ -22,5 +22,9 @@ client.on('message',msg=>{
         console.error(err)
     }
 })
+process.on('unhandledRejection',(reason,p)=>{
+    console.error('Unhandled Rejection at : ',p,' reason : ',reason)
+    process.exit(1)
+})
 
 client.initialize()
