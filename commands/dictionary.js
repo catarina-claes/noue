@@ -13,6 +13,7 @@ module.exports = {
 	        "useQueryString": true
         });
         req.end(res=>{
+		if(res.body.list == undefined)return
             if((nn > res.body.list.length) || (nn < 0)) nn = 0;
             if(res.error)return client.sendMessage(msg.from,'errorlah pak')
             if(res.body.list[0] == undefined)return client.sendMessage(msg.from,`That word doesn't exist in this world`)
