@@ -23,8 +23,8 @@ module.exports = {
                 	"useQueryString": true
                 });
                 req.end(function (res) {
-                	if (res.error)return client.sendMessage(msg.from,'Anda tidak diridhoi :v')
-                    client.sendMessage(msg.from,`ID: ${x.id}\n${x.title} (${x.duration})\n${res.body.Download_url}`)
+                	if (res.error)return client.sendMessage(msg.to,'Anda tidak diridhoi :v')
+                    client.sendMessage(msg.to,`ID: ${x.id}\n${x.title} (${x.duration})\n${res.body.Download_url}`)
                 });
             });
         });
