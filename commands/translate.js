@@ -20,8 +20,8 @@ module.exports = {
         	"useQueryString": true
         });
         req.end(function (res) {
-        	if (res.error)return client.sendMessage(msg.from,'Error bang,masukin apake')
-            client.sendMessage(msg.from,res.body.responseData.translatedText)
+        	if (res.error)return client.sendMessage(msg.to,'Error bang,masukin apake')
+            client.sendMessage(msg.to,res.body.responseData.translatedText)
         });
         
     }
