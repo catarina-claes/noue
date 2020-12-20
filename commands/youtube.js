@@ -12,6 +12,7 @@ module.exports = {
         });
         req.end(function (res) {
             if (res.error) return client.sendMessage(msg.to,'Anda tidak diridhoi :v')
+            if (res.body.items.length == 0)return client.sendMessage(msg.to,'masukin apake')
             if(res.body.items[0].type == 'search-refinements')res.body.items.shift()
             res.body.items.splice(3)
             res.body.items.forEach(x => {
