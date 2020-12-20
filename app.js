@@ -10,9 +10,11 @@ for(file of commandFiles){
     commands.push(command)
 }
 client.once('ready',()=>console.log(`i'm alive`))
-client.on('message',msg=>{
+client.on('message_create',msg=>{
+    if(!msg.body.startsWith('!'))return
     if(!(msg.from == '6285798441009@c.us'))return
-        const args = msg.body.trim().split(/ +/)
+    console.log(msg)
+        const args = msg.body.trim().slice(1).split(/ +/)
         const commandName = args.shift().toLowerCase()
         const command = commands.findIndex(x=>x.name.includes(commandName))
         if(command == -1)return
