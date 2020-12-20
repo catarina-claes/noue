@@ -15,8 +15,8 @@ module.exports = {
         req.end(res=>{
 		if(res.body.list == undefined)return
             if((nn > res.body.list.length) || (nn < 0)) nn = 0;
-            if(res.error)return client.sendMessage(msg.from,'errorlah pak')
-            if(res.body.list[0] == undefined)return client.sendMessage(msg.from,`That word doesn't exist in this world`)
-            client.sendMessage(msg.from,`The Definition of ${args.join(' ').toUpperCase()} :\n`+res.body.list[nn].definition+`\n\nExample in Sentence :\n`+res.body.list[nn].example)});
+            if(res.error)return client.sendMessage(msg.to,'errorlah pak')
+            if(res.body.list[0] == undefined)return client.sendMessage(msg.to,`That word doesn't exist in this world`)
+            client.sendMessage(msg.to,`The Definition of ${args.join(' ').toUpperCase()} :\n`+res.body.list[nn].definition+`\n\nExample in Sentence :\n`+res.body.list[nn].example)});
     }
 }
