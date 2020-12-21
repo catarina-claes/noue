@@ -13,6 +13,7 @@
   "author": "noue",
   "license": "ISC",
   "dependencies": {
+    "image-to-base64": "^2.1.1",
     "unirest": "^0.6.0",
     "whatsapp-web.js": "^1.11.1"
   }
