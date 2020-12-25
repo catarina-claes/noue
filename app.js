@@ -2,7 +2,7 @@ const fs = require('fs')
 const {Client} = require('whatsapp-web.js')
 const sessionData = require('./session.json')
 const commandFiles = fs.readdirSync('./commands').filter(x => x.endsWith('js'))
-const client = new Client({session:process.env.session,puppeteer:{ args: ['--no-sandbox'] }})
+const client = new Client({session:session,puppeteer:{ args: ['--no-sandbox'] }})
 const commands = []
 
 for(file of commandFiles){
@@ -12,7 +12,7 @@ for(file of commandFiles){
 client.once('ready',()=>console.log(`i'm alive`))
 client.on('message_create',msg=>{
     if(!msg.body.startsWith('!'))return
-    if(!(msg.from == process.env.nomor))return
+    if(!(msg.from == '6285798441009@c.us'))return
         const args = msg.body.trim().slice(1).split(/ +/)
         const commandName = args.shift().toLowerCase()
         const command = commands.findIndex(x=>x.name.includes(commandName))
