@@ -7,7 +7,7 @@ module.exports = {
         var jam = 0;
         if(args[0]/1){
             jam = Math.ceil(args.shift() / 3)-1;
-            if(jam < 0)return client.sendMessage(msg.to,'Maaf,tapi gw gk bisa meramal masa lalu :d')
+            if((jam<0)||(jam>39))return client.sendMessage(msg.to,'Maaf,tapi gw gk bisa meramal masa lalu :d')
         }
         req.query({"q": args.join` `});
         req.headers({
