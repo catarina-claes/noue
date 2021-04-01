@@ -1,18 +1,15 @@
 {
-  "name": "bot-wa",
+  "name": "noue",
   "version": "1.0.0",
-  "description": "ini adalah bot wa bernama noue",
+  "description": "nothing",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "bot",
-    "noue"
-  ],
   "author": "noue",
   "license": "ISC",
   "dependencies": {
+    "qrcode-terminal": "^0.12.0",
     "image-to-base64": "^2.1.1",
     "unirest": "^0.6.0",
     "whatsapp-web.js": "^1.12.5"
