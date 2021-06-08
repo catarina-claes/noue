@@ -15,6 +15,6 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-....A..
+I.. i.... i.
 
-This is just a super big bot
+i am a weeb
