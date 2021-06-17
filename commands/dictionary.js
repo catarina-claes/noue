@@ -8,7 +8,7 @@ module.exports = {
         var req = unirest("GET", "https://mashape-community-urban-dictionary.p.rapidapi.com/define");
         req.query({"term": args.join` `});
         req.headers({
-	        "x-rapidapi-key": "3b18b63be3mshf3e29579172b51cp115d39jsn4d40dbf7cc95",
+	        "x-rapidapi-key": "your api's key",
 	        "x-rapidapi-host": "mashape-community-urban-dictionary.p.rapidapi.com",
 	        "useQueryString": true
         });
