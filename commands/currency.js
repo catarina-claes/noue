@@ -10,7 +10,7 @@ module.exports = {
             "amount": args[2]
         });
         req.headers({
-            "x-rapidapi-key": "3b18b63be3mshf3e29579172b51cp115d39jsn4d40dbf7cc95",
+            "x-rapidapi-key": "your api's key",
             "x-rapidapi-host": "currency-converter13.p.rapidapi.com",
             "useQueryString": true
         });
