@@ -7,7 +7,7 @@ module.exports = {
         var req = unirest("POST", "https://jspell-checker.p.rapidapi.com/check");
         req.headers({
             "content-type": "application/json",
-            "x-rapidapi-key": "3b18b63be3mshf3e29579172b51cp115d39jsn4d40dbf7cc95",
+            "x-rapidapi-key": "your api's key",
             "x-rapidapi-host": "jspell-checker.p.rapidapi.com",
             "useQueryString": true
         });
