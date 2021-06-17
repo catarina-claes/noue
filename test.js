@@ -13,13 +13,13 @@ const client = new Client({session:sessionData})
 //console.log(commands)
 client.once('ready',()=>console.log(`i'm alive`))
 client.on('message',msg=>{
-    if(!(msg.from == '6285798441009@c.us'))return
+    if(!(msg.from == 'your number@c.us'))return
     //const args = msg.body.trim().split(/ +/)
     //const commandName = args.shift().toLowerCase()
     //const command = commands.find(x=>x.name.includes(commandName))
     //if(!command)return
     try{
-        client.sendMessage(msg.from,'Ohayo Sensei')
+        client.sendMessage(msg.from,'Ohayo ')
     }catch(err){
         console.error(`error: ${err}`)
     }
