@@ -11,7 +11,7 @@ module.exports = {
         }
         req.query({"q": args.join` `});
         req.headers({
-            "x-rapidapi-key": "your api's key",
+            "x-rapidapi-key": "3b18b63be3mshf3e29579172b51cp115d39jsn4d40dbf7cc95",
             "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com",
             "useQueryString": true
         });
