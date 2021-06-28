@@ -20,7 +20,7 @@ module.exports = {
             })
         }
         req.headers({
-            "x-rapidapi-key": "your api's key",
+            "x-rapidapi-key": "3b18b63be3mshf3e29579172b51cp115d39jsn4d40dbf7cc95",
             "x-rapidapi-host": "jikan1.p.rapidapi.com",
             "useQueryString": true
         });
@@ -45,7 +45,7 @@ module.exports = {
             if(/search\/character/.test(uniq)){
                 let malid = res.body.results[0].mal_id
                 var pict = unirest("GET", `https://jikan1.p.rapidapi.com/character/${malid}/pictures`);
-                pict.headers({ "x-rapidapi-key": "your api's key",
+                pict.headers({ "x-rapidapi-key": "3b18b63be3mshf3e29579172b51cp115d39jsn4d40dbf7cc95",
                     "x-rapidapi-host": "jikan1.p.rapidapi.com",
                     "useQueryString": true});
                 pict.end(function (ress) {
